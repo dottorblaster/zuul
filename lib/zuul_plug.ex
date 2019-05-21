@@ -1,5 +1,3 @@
-defmodule Zuul.Middleware do
-    @moduledoc false
-
-    
+defmodule Zuul.Plug do
+  @moduledoc false
 end

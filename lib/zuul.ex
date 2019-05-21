@@ -4,7 +4,14 @@ defmodule Zuul do
   You give him a file with API keys, and it lets pass only authorized connections.
   """
 
-  def authenticate(key, file_path) do
+  def authenticate(key, salt, file_path) do
+    keys = file_path
+    |> File.read!()
+    |> String.split("\n")
+    |> Enum.map(fn row ->
+      [holder, key] = String.split(row, "=")
+      key
+    end)
     
   end
 end
