@@ -18,12 +18,12 @@ defmodule Zuul do
   def authenticate(key, file_path) do
     encrypted_key = sha256(key)
 
-    keys =
-      file_path
+    file_path
       |> File.read!()
       |> String.split("\n")
+      |> Enum.filter(fn row -> row !== "" end)
       |> Enum.map(fn row ->
-        [holder, sha256] = String.split(row, "=")
+        [_, sha256] = String.split(row, "=")
         sha256
       end)
       |> Enum.member?(encrypted_key)
