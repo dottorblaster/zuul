@@ -1,2 +1,2 @@
-osd_dot_tools=$2b$12$sIPm4kilB6AWaFUgHh.siufdsv0Wzx4Smoso1I0ObjNOQPVv2sKKm
-biancalana_dot_me=$2b$12$KLnYI1aGqdZ70y6J7.zkb.5FVmHWqin.UPLPUA1B9jJ7NoNIyh7Yi
+osd_dot_tools=31beb668eb23869f6fa5608ff603aaf0e670c15aa5c295105f2f664e7d310780
+biancalana_dot_me=4db307ae62006bc94b517fca274a8a1e7403600c6b9266d98e07bea65e586111
