@@ -7,8 +7,8 @@ defmodule Zuul.MixProject do
       version: "0.1.0",
       elixir: "~> 1.8",
       start_permanent: Mix.env() == :prod,
-      source_url: "https://github.com/dottorblaster/vaporstring",
-      homepage_url: "https://github.com/dottorblaster/vaporstring",
+      source_url: "https://github.com/dottorblaster/zuul",
+      homepage_url: "https://github.com/dottorblaster/zuul",
       deps: deps(),
       package: package(),
       description: description()
