@@ -7,7 +7,11 @@ defmodule Zuul.MixProject do
       version: "0.1.0",
       elixir: "~> 1.8",
       start_permanent: Mix.env() == :prod,
-      deps: deps()
+      source_url: "https://github.com/dottorblaster/vaporstring",
+      homepage_url: "https://github.com/dottorblaster/vaporstring",
+      deps: deps(),
+      package: package(),
+      description: description()
     ]
   end
 
@@ -22,6 +26,20 @@ defmodule Zuul.MixProject do
   defp deps do
     [
       {:plug_cowboy, "~> 2.0"}
+    ]
+  end
+
+  defp description do
+    "Dead simple API key authentication for Elixir"
+  end
+
+  defp package do
+    [
+      maintainers: ["Alessio Biancalana"],
+      licenses: ["MIT"],
+      links: %{
+        "GitHub" => "https://github.com/dottorblaster/zuul"
+      }
     ]
   end
 end
