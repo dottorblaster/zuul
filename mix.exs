@@ -5,7 +5,7 @@ defmodule Zuul.MixProject do
     [
       app: :zuul,
       version: "0.2.0",
-      elixir: "~> 1.5",
+      elixir: "~> 1.6",
       start_permanent: Mix.env() == :prod,
       source_url: "https://github.com/dottorblaster/zuul",
       homepage_url: "https://github.com/dottorblaster/zuul",
