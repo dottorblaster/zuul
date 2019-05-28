@@ -27,6 +27,18 @@ defmodule Zuul.PlugTest do
     end
   end
 
+  test "protect only some methods upon proper option declaration" do
+    wrong_get_request = get_fixture_without_key()
+    passing_options_request = Map.replace!(get_fixture_without_key(), :method, "OPTIONS")
+    plug_opts = [key_file: "./test/fixtures/api_keys.txt", protect_methods: ["GET", "POST"]]
+
+    assert_raise Zuul.MissingAuthorizedHeaderError, fn ->
+      Zuul.Plug.call(wrong_get_request, plug_opts)
+    end
+
+    assert Zuul.Plug.call(passing_options_request, plug_opts) === passing_options_request
+  end
+
   def get_fixture_ok() do
     %Plug.Conn{
       assigns: %{},

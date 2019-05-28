@@ -19,13 +19,13 @@ defmodule Zuul do
     encrypted_key = sha256(key)
 
     file_path
-      |> File.read!()
-      |> String.split("\n")
-      |> Enum.filter(fn row -> row !== "" end)
-      |> Enum.map(fn row ->
-        [_, sha256] = String.split(row, "=")
-        sha256
-      end)
-      |> Enum.member?(encrypted_key)
+    |> File.read!()
+    |> String.split("\n")
+    |> Enum.filter(fn row -> row !== "" end)
+    |> Enum.map(fn row ->
+      [_, sha256] = String.split(row, "=")
+      sha256
+    end)
+    |> Enum.member?(encrypted_key)
   end
 end
